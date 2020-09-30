@@ -1,0 +1,35 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <p>hello</p>
+    <div id="user_list"></div>
+    <input id="name" type="text"/>
+    <input id="money" type="number"/>
+    <input onclick="saveUser()" value="click me!" type="button"/>
+  </body>
+  <script>
+    fetch('http://localhost:3000/users')
+    .then(res => res.json())
+    .then(data => {
+      const users = data.arr;
+      let html ='';
+      for (const user of users) {
+        const name = user.name;
+        html+= '<p>'+name+'</p>';
+      }
+      document.getElementById('user_list').innerHTML = html;
+    })
+
+    function saveUser() {
+      const name = document.getElementById("name").value;
+      const money = document.getElementById("money").value;
+      fetch('http://localhost:3000/users', {
+        "method": "POST", 
+        "body": JSON.stringify({ name: name,  money: money }),
+        "headers": {"Content-Type": "application/json"}
+      })
+    }
+  </script>
+</html>

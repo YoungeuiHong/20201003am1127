@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="HW3_style.css">
+        <title>함께혼밥</title>
+    </head>
+
+    <body>
+        <div class="container">
+            
+
+            <div id="header">
+                <style>
+                    li {display: inline; float: right;}
+                    a:link {color: grey; text-decoration:none; block; padding: 8px; background-color: white; font-size: small;}
+                  </style>
+                  <u1>
+                    <li><a display="block" href="default.asp">회원가입</a></li>
+                    <li><a display="block" href="default.asp">로그인</a></li>
+                    <li><a display="block" href="default.asp">고객센터</a></li>
+                    <li><a display="block" href="default.asp">혼밥친구 찾기</a></li>
+                  </u1>
+            </div>
+            
+
+            <div id="mainlogo">
+                <img src="logo2.png" alt="함께혼밥 로고">
+            </div>
+           
+
+            <div id="gnb">
+                <ul>
+                    <li><a display="block" href="default.asp">전체 카테고리</a></li>
+                    <li><a display="block" href="default.asp">주간 순위</a></li>
+                    <li><a display="block" href="default.asp">혼밥친구 찾기</a></li>
+                    <li><a display="block" href="default.asp">공구팸 찾기</a></li>
+                    <li><a display="block" href="default.asp">맛집 후기 공유</a></li>
+                    <li><a display="block" href="default.asp">이벤트</a></li>
+                    <li><a display="block" href="default.asp">마이페이지</a></li>
+                    <li><a display="block" href="default.asp">고객센터</a></li>
+                  </ul>
+            </div>
+           
+
+            <div id="slider">
+                
+                <div class="mySlides fade">
+                    <img src="slide show 1.png" style="max-width: 100%">
+                    <button class="btn">혼밥친구 찾으러 가기</button>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="slide show 2.png" style="max-width: 100%">
+                    <button class="btn_2">공구팸 찾으러 가기</button>
+                </div>
+                
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+            </div>
+
+            <div class="wrap">
+                <div class="searchbar">
+                   <input type="text" class="search" placeholder="      찾으시는 상품이 있나요?">
+                   <button type="submit" class="searchButton" onclick="saveUser1()">
+                     <span class="search-icon"></span>
+                     <i class="fa fa-search"></i>
+                     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                  </button>
+                </div>
+             </div>    
+
+
+            <div id="main1">
+                <div id="main1_title">
+                    <h3 id="main1_ti">
+                        <span id="main1_ti_span">지금 제일 핫한 공구!</span>
+                    </h3>
+                </div>
+            </div>
+            
+            <div id="list_goods">
+
+                <div id="gallery">
+                    <a target="_blank" href="salad.jpg">
+                        <img src="salad.jpg" width="400" height="600">
+                    </a>
+                    <div class="desc">샐러드 야채 6종<br/>6,500원</div>
+                    <input id="quantity" type="number"/>
+                    <input onclick="saveUser2()" value="장바구니 담기" type="button"/>
+                </div>
+
+                <div id="gallery">
+                    <a target="_blank" href="juice.png">
+                        <img src="juice.png" width="400" height="600">
+                        <div class="desc">착즙주스 재료 7종<br/>9,500원</div>
+                        <input id="quantity2" type="number"/>
+                        <input onclick="saveUser3()" value="장바구니 담기" type="button"/>
+                    </a>
+                </div>
+
+                <div id="gallery">
+                    <a target="_blank" href="viet.jpg">
+                        <img src="viet.jpg" width="400" height="600">
+                        <div class="desc">월남쌈 1회분 야채<br/>4,500원</div>
+                        <input id="quantity3" type="number"/>
+                        <input onclick="saveUser4()" value="장바구니 담기" type="button"/>
+                    </a>
+                </div>
+
+                <div id="gallery">
+                    <a target="_blank" href="mara.jpg">
+                        <img src="mara.jpg" width="400" height="600">
+                        <div class="desc">마라탕 재료 종합세트<br/>12,500원</div>
+                        <input id="quantity4" type="number"/>
+                        <input onclick="saveUser5()" value="장바구니 담기" type="button"/>
+                    </a>
+                </div>
+
+            </div>
+
+            <div id="list_goods_2">
+
+                <div id="gallery">
+                    <a target="_blank" href="전복.png">
+                        <img src="전복.png" width="400" height="600">
+                    </a>
+                    <div class="desc">쫄깃쫄깃 전복<br/>15,000원</div>
+                    <input id="quantity5" type="number"/>
+                    <input onclick="saveUser6()" value="장바구니 담기" type="button"/>
+                </div>
+
+                <div id="gallery">
+                    <a target="_blank" href="아보카도.png">
+                        <img src="아보카도.png" width="400" height="600">
+                        <div class="desc">부드러운 아보카도<br/>8,500원</div>
+                        <input id="quantity6" type="number"/>
+                        <input onclick="saveUser7()" value="장바구니 담기" type="button"/>
+                    </a>
+                </div>
+
+                <div id="gallery">
+                    <a target="_blank" href="peach.png">
+                        <img src="peach.png" width="400" height="600">
+                        <div class="desc">향긋한 복숭아<br/>12,500원</div>
+                        <input id="quantity7" type="number"/>
+                        <input onclick="saveUser8()" value="장바구니 담기" type="button"/>
+                    </a>
+                </div>
+
+                <div id="gallery">
+                    <a target="_blank" href="banana.png">
+                        <img src="banana.png" width="400" height="600">
+                        <div class="desc">바나나 3개<br/>1,500원</div>
+                        <input id="quantity8" type="number"/>
+                        <input onclick="saveUser9()" value="장바구니 담기" type="button"/>
+                    </a>
+                </div>
+
+            </div>
+
+            <div id="footer_line">
+            <hr style="width:95%" color="#EAECEE">
+            </div>
+
+            <div class="footer1">
+                <div id="footer1_in1">
+                <p class="footer1_font1">고객행복센터<br/>사업주: 1588-8747<br/>고객: 1588-8751</p>               
+                </div>
+            </div>
+
+            <div id="footer2">              
+                <p class="footer1_font2">법인명(상호): 함께혼밥 | 사업자등록번호: 261-82-98534 <br/>통신판매업: 제 2020-서울관악-11345호 | 개인정보보호책임자: 홍길동 <br/>주소: 서울시 관악구 관악로 1, 서울대학교  |  대표이사: 홍길동 <br/>채용문의: recruit@together.com <br/> 팩스: 02-990-1254  |  이메일: snuhongfrcs@snu.ac.kr </p>
+            </div>
+
+            <div id="footer3">
+                <p class="footer3_font1">함께혼밥 SNS 보러가기</p>               
+                <img src="ico_blog.webp" width="40" height="40">
+                <img src="ico_fb.webp" width="40" height="40">
+                <img src="ico_instagram.webp" width="40" height="40">
+                <img src="ico_youtube.webp" width="40" height="40">
+            </div>
+
+            
+        </div>
+        
+
+    </body>
+
+
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+fetch('http://localhost:3000/users')
+    .then(res => res.json())
+    .then(data => {
+      const users = data.arr;
+      let html ='';
+      for (const user of users) {
+        const name = user.name;
+        html+= '<p>'+name+'</p>';
+      }
+      document.getElementById('user_list').innerHTML = html;
+    })
+
+
+
+
+    function saveUser1() {
+      const search= document.getElementById("search").value;
+      console.log(search);
+      fetch('http://localhost:3000/users', {
+        "method": "POST", 
+        "body": JSON.stringify({ search:search }),
+        "headers": {"Content-Type": "application/json"}
+      })
+    }
+
+    function saveUser2() {
+      const salad= document.getElementById("salad").value;
+      fetch('http://localhost:3000/users', {
+        "method": "POST", 
+        "body": JSON.stringify({ salad:salad }),
+        "headers": {"Content-Type": "application/json"}
+      })
+    }
+
+
+
+    </script>
+</html>
