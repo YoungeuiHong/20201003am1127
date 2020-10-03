@@ -26,7 +26,7 @@ router.get('/', async function(req, res, next) {
  
 });
 
-router.post('/', async function(req, res, next) {
+/* router.post('/', async function(req, res, next) {
   
   try {
     const {name, money, email, pwd, salad, juice, viet, mara, shell, avocado, peach, banana, search} = req.body;
@@ -34,6 +34,38 @@ router.post('/', async function(req, res, next) {
     const pwdSalt = (await crypto.randomBytes(64)).toString('base64');
     const hashedPwd = (crypto.pbkdf2Sync(pwd, pwdSalt, 100000, 64, "SHA512")).toString('base64');
     await connection.query('INSERT INTO user_TB(name, money, email, hashed_pwd, pwd_salt, salad, juice, viet, mara, shell, avocado, peach, banana, search) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)', [name, money, email, hashedPwd, pwdSalt, salad, juice, viet, mara, shell, avocado, peach, banana, search]);
+    res.json({status: 201, msg: '저장 성공!'});
+  } catch(err) {
+    console.log(err);
+    res.json({status: 500, msg: '서버 에러'});
+    
+  }
+ 
+}); */
+
+/*router.post('/', async function(req, res, next) {
+  
+  try {
+    const {name, money, email, pwd} = req.body;
+    const connection = await pool.getConnection();
+    const pwdSalt = (await crypto.randomBytes(64)).toString('base64');
+    const hashedPwd = (crypto.pbkdf2Sync(pwd, pwdSalt, 100000, 64, "SHA512")).toString('base64');
+    await connection.query('INSERT INTO user_TB(name, money, email, hashed_pwd, pwd_salt) VALUES(?,?,?,?,?)', [name, money, email, hashedPwd, pwdSalt]);
+    res.json({status: 201, msg: '저장 성공!'});
+  } catch(err) {
+    console.log(err);
+    res.json({status: 500, msg: '서버 에러'});
+    
+  }
+ 
+});*/
+
+router.post('/', async function(req, res, next) {
+  
+  try {
+    const {salad, juice, viet, mara, shell, avocado, peach, banana, search} = req.body;
+    const connection = await pool.getConnection();
+    await connection.query('INSERT INTO user_TB(salad, juice, viet, mara, shell, avocado, peach, banana, search) VALUES(?,?,?,?,?,?,?,?,?)', [salad, juice, viet, mara, shell, avocado, peach, banana, search]);
     res.json({status: 201, msg: '저장 성공!'});
   } catch(err) {
     console.log(err);

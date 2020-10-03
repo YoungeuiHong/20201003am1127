@@ -142,30 +142,26 @@
 
             <!--검색바: 찾으시는 상품이 있나요?-->
 
+            <div id="searchbox">
             <div class="wrap">
                 <div class="searchbar">
-                   <input type="text" class="search" placeholder="      찾으시는 상품이 있나요?">
+                   <input type="text" class="search" placeholder="찾으시는 상품이 있나요?">
                    <button type="submit" class="searchButton" onclick="saveUser1()">
-                     <span class="search-icon"></span>
                      <i class="fa fa-search"></i>
                      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
                   </button>
                 </div>
-             </div>    
+             </div>
+             </div>
 
             <!--지금 제일 핫한 공구!-->
 
-
-                <div id="main1_title">
-                    <h3 id="main1_ti">
-                        <span id="main1_ti_span">지금 제일 핫한 공구!</span>
-                    </h3>
-                </div>
+            <div id="main1">
+                <h2 id="main1_title"> 지금 제일 핫한 공구! </h2>
+            </div>
 
             
             <!--상품창-->
-
-            <!--상품 수량 박스 관련 설치-->
 
 
             <!--<div class="list_goods">-->
@@ -209,7 +205,7 @@
 
                 <div id="goods5">
                     
-                        <img src="전복.png" class="goods_img hover-shadow">
+                        <img src="전복.PNG" class="goods_img hover-shadow">
                     
                     <div class="desc">쫄깃쫄깃 전복<br/>15,000원</div>
                     <input id="quantity5" type="number"/>
@@ -218,7 +214,7 @@
 
                 <div id="goods6">
                     
-                        <img src="아보카도.png" class="goods_img hover-shadow">
+                        <img src="아보카도.PNG" class="goods_img hover-shadow">
                         <div class="desc">부드러운 아보카도<br/>8,500원</div>
                         <input id="quantity6" type="number"/>
                         <input onclick="saveUser7()" value="장바구니 담기" type="button"/>
@@ -227,7 +223,7 @@
 
                 <div id="goods7">
                     
-                        <img src="peach.png" class="goods_img hover-shadow">
+                        <img src="peach.PNG" class="goods_img hover-shadow">
                         <div class="desc">향긋한 복숭아<br/>12,500원</div>
                         <input id="quantity7" type="number"/>
                         <input onclick="saveUser8()" value="장바구니 담기" type="button"/>
@@ -236,7 +232,7 @@
 
                 <div id="goods8">
                     
-                        <img src="banana.png" class="goods_img hover-shadow">
+                        <img src="banana.PNG" class="goods_img hover-shadow">
                         <div class="desc">바나나 3개<br/>1,500원</div>
                         <input id="quantity8" type="number"/>
                         <input onclick="saveUser9()" value="장바구니 담기" type="button"/>
@@ -335,16 +331,17 @@
         // 상품 데이터 fetch
 
         function saveUser2() {
-        const salad = document.getElementById("salad").value;
-        console.log(salad);
-        fetch('http://localhost:3000/users', {
-            "method": "POST", 
-            "body": JSON.stringify({ salad:salad }),
-            "headers": {"Content-Type": "application/json"}
+            alert("장바구니에 담겼습니다")
+            const salad = document.getElementById("salad").value;
+            console.log(salad);
+            fetch('http://localhost:3000/users', {
+                "method": "POST", 
+                "body": JSON.stringify({ salad:salad }),
+                "headers": {"Content-Type": "application/json"}
         })
         }
 
-        function saveUser2() {
+        function saveUser3() {
             alert("장바구니에 담겼습니다")
         const salad= document.getElementById("salad").value;
         fetch('http://localhost:3000/users', {
@@ -354,7 +351,7 @@
         })
         }
 
-        function saveUser3() {
+        function saveUser4() {
             alert("장바구니에 담겼습니다")
         const salad= document.getElementById("juice").value;
         fetch('http://localhost:3000/users', {

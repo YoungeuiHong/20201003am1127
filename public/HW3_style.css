@@ -266,8 +266,7 @@
         grid-column: 1/13;
         overflow: hidden;
         position: relative;
-       /* margin-left: auto;
-        margin-right: auto; */
+        margin: auto;
     }
 
     .mySlides {
@@ -279,10 +278,10 @@
 
     .myslides img {
         display: block;
-        width: 1350px;
+        width: 1300px;
         height: 410px; 
-        /* max-width: 100%;
-        overflow: hidden; */
+        /* max-width: 100%;*/
+        overflow: hidden;
         z-index: 0;
     }
 
@@ -335,8 +334,6 @@
 
     /* Style the button and place it in the middle of the container/image */
     .mySlides .slide_btn_1 {
-        display: table-cell;
-        vertical-align: middle;
         position: absolute;
         top: 70%;
         left: 16%;
@@ -353,58 +350,68 @@
         border-radius: 50px;
         z-index: 100;
       }
-      
-    .slide_btn_1:hover {
-        background-color: #2D67B0;
-      }
 
-    .mySlides .slide_btn_2 {
+      .mySlides .slide_btn_2 {
         position: absolute;
         top: 70%;
-        left: 14%;
-        height: 8%;
+        left: 16%;
+        max-height: 20%;
         max-width: 30%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #cb7e53;
         color: white;
-        font-size: 18px;
-        padding: 12px 40px;
+        font-size: 1.5vw;
+        padding: 1vw 2vw;
         border: none;
         cursor: pointer;
         border-radius: 50px;
         z-index: 100;
       }
+      
+    .slide_btn_1:hover {
+        background-color: #2D67B0;
+      }
 
 /* 검색창 */
 
   /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    grid-row: 32/42;
-    grid-column: 1/13;
-    width: 75%;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-  }
+  
+    #searchbox {
+      grid-row: 32/42;
+      grid-column: 1/13;
+    }
+    
+    .wrap{
+      width: 75%;
+      position: relative;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    } 
+
+    * {
+      box-sizing: border-box;
+    }
 
     .searchbar {
       
-      width: 90%;
-      position: relative;
+      width: 100%;
+      position: absolute;
       display: flex;
     }
 
     .search {
+      float: left;
       width: 100%;
-      border: 5px solid #D5D8DC ;
-      border-right: none;
-      padding: 5px;
+      border: 10px #D5D8DC ;
       height: 70px;
-      border-radius: 40px 0 0 40px;
+      padding: 0 2vw;
+      border-radius: 40px 40px 40px 40px;
       outline: none;
       color: #D5D8DC ;
+      background-color: #FDFEFE;
     }
 
     .search:focus{
@@ -412,61 +419,38 @@
     }
 
     .searchButton {
+      float:left;
       width: 80px;
       height: 70px;
-      border: 1px solid #D5D8DC ;
-      background: #D5D8DC ;
+      background-color: transparent;
+      border: none;
       text-align: center;
       color: #797D7F;
-      border-radius: 0 40px 40px 0;
       cursor: pointer;
-      font-size: 35px;
+      font-size: 2vw;
     }
 
+      
+    input::placeholder {
+      color: #616A6B;
+      padding: 0 2vw;
+      font-size: 1.1vw;
+    } 
 
 /* 지금 제일 핫한 공구 */
 
-
-    #main1_title {
-        grid-row: 42/50;
+      #main1 {
+        grid-row: 43/50;
         grid-column: 1/13;
-    }
+      }
 
-    #main1_ti {
+      #main1_title {
         font-weight: 600;
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 2vw;
+        color: #424242;
         letter-spacing: -0.3px;
         text-align: center;
-        color: #424242;
-        font-family: noto sans;
-    }
-
-    #main1_ti_span {
-        position: relative;
-        font-weight: 600;
-    }
-
-/* 카운트다운 타이머 */
-
-#countdown li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
-}
-
-#countdown li span {
-  display: block;
-  font-size: 4.5rem;
-}
-
-#countdown {
-  grid-row: 105/115;
-  grid-column: 1/13; 
-  background-color: #EBEDEF;
-}
+      }
 
 
 /* 상품 목록 */
@@ -516,10 +500,11 @@
     /* 상품 이미지 속성 */
 
     .goods_img {
-      width: 85%;
-      height: 75%;
+      max-width: 85%;
+      max-height: 70%;
       display: block;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hover-shadow:hover {
@@ -539,11 +524,7 @@
     /* 상품 수량 박스 스타일링 */
 
 
-  
-  input::placeholder {
-    color: #616A6B;
-    font-size: 16px;
-  } 
+
 
     #footer_line {
     grid-row: 103/105;
