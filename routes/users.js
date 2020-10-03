@@ -69,7 +69,7 @@ router.post('/', async function(req, res, next) {
     res.json({status: 201, msg: '저장 성공!'});
   } catch(err) {
     console.log(err);
-    res.json({status: 500, msg: '서버 에러'});
+    res.json({status: 404, msg: '서버 에러'});
     
   }
  
