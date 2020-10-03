@@ -10,7 +10,7 @@ try {
     req.userId = user.id;
     next();
 } catch(err) {
-    return res.json({status:401, msg: '로그인도 안 된 사람이!'})
+    return res.json({status:401, msg: '권한이 없습니다. 로그인을 해주세요'})
 }
 }
 

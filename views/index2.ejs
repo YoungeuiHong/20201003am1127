@@ -9,48 +9,129 @@
             
 
             <div id="header">
-                <style>
-                    li {display: inline; float: right;}
-                    a:link {color: grey; text-decoration:none; block; padding: 8px; background-color: white; font-size: small;}
-                  </style>
+                
                   <u1>
-                    <li><a display="block" href="default.asp">회원가입</a></li>
-                    <li><a display="block" href="default.asp">로그인</a></li>
-                    <li><a display="block" href="default.asp">고객센터</a></li>
-                    <li><a display="block" href="default.asp">혼밥친구 찾기</a></li>
+                    <li class="header_li"><a class="header_font" onclick="document.getElementById('id02').style.display='block'">회원가입</a></li>
+                    <li class="header_li"><a class="header_font" onclick="document.getElementById('id01').style.display='block'">로그인</a></li>
                   </u1>
+
+                <!-- 로그인 -->
+
+                <!-- The Modal -->
+                <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                class="close" title="Close Modal">&times;</span>
+
+                <!-- Modal Content -->
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                    <img src="logo2.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="login_container">
+                    <label for="uname"><b>ID</b></label>
+                    <input type="text" placeholder="아이디를 입력해주세요" onclick="login_ID()" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="비밀번호를 입력해주세요" onclick="login_pwd()" name="psw" required>
+
+                    <button class="login_button" type="submit" onclick="login()">로그인</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> 로그인 상태 유지
+                    </label>
+                    </div>
+
+                    <div class="login_container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button>
+                    <span class="psw"><a href="#" class="forgot_pwd"> 비밀번호를 잊어버리셨나요?</a></span>
+                    </div>
+                </form>
+                </div>
+
+                <!--회원가입 modal-->
+
+                    <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id02').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+    
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="imgcontainer">
+                        <img src="logo2.png" alt="Avatar" class="avatar">
+                        </div>
+    
+                        <div class="login_container">
+                        <label for="uname"><b>Email</b></label>
+                        <input id="signup_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                        <label for="psw"><b>Password</b></label>
+                        <input id="signup_pwd" type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+    
+                        <button class="login_button" type="submit" onclick="signup()">회원가입</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> 로그인 정보 기억
+                        </label>
+                        </div>
+    
+                        <div class="login_container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button>
+                        <span class="psw"><a href="#" class="forgot_pwd"> 회원가입 약정 </a></span>
+                        </div>
+                    </form>
+                    </div>
+
+                
+
+
             </div>
             
+            <!--함께혼밥로고-->
 
             <div id="mainlogo">
                 <img src="logo2.png" alt="함께혼밥 로고">
             </div>
            
+            <!--네비게이션바-->
 
             <div id="gnb">
-                <ul>
-                    <li><a display="block" href="default.asp">전체 카테고리</a></li>
-                    <li><a display="block" href="default.asp">주간 순위</a></li>
-                    <li><a display="block" href="default.asp">혼밥친구 찾기</a></li>
-                    <li><a display="block" href="default.asp">공구팸 찾기</a></li>
-                    <li><a display="block" href="default.asp">맛집 후기 공유</a></li>
-                    <li><a display="block" href="default.asp">이벤트</a></li>
-                    <li><a display="block" href="default.asp">마이페이지</a></li>
-                    <li><a display="block" href="default.asp">고객센터</a></li>
-                  </ul>
-            </div>
-           
 
+                <nav role="navigation">
+                    <ul id="main-menu">
+                      <li><a href="#">전체 카테고리</a>
+                        <ul id="sub-menu">
+                            <li><a href="#" aria-label="subemnu">치킨</a></li>
+                            <li><a href="#" aria-label="subemnu">피자/양식</a></li>
+                            <li><a href="#" aria-label="subemnu">분식</a></li>
+                            <li><a href="#" aria-label="subemnu">일식/돈까스</a></li>
+                            <li><a href="#" aria-label="subemnu">중국집</a></li>
+                            <li><a href="#" aria-label="subemnu">한식</a></li>
+                            <li><a href="#" aria-label="subemnu">카페/디저트</a></li>
+                            <li><a href="#" aria-label="subemnu">채소/과일</a></li>
+                            <li><a href="#" aria-label="subemnu">정육/수산</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">혼밥친구 찾기</a></li>
+                      <li><a href="#">공구팸 찾기</a></li>
+                      <li><a href="#">맛집 후기 공유</a></li>
+                      <li><a href="#">이벤트</a></li>
+                      <li><a href="#">고객센터</a></li>
+                    </ul>
+                  </nav>
+
+            </div>
+
+            <!--슬라이더-->
+           
             <div id="slider">
                 
                 <div class="mySlides fade">
                     <img src="slide show 1.png" style="max-width: 100%">
-                    <button class="btn">혼밥친구 찾으러 가기</button>
+                    <button class="slide_btn_1">혼밥친구 찾으러 가기</button>
                 </div>
 
                 <div class="mySlides fade">
                     <img src="slide show 2.png" style="max-width: 100%">
-                    <button class="btn_2">공구팸 찾으러 가기</button>
+                    <button class="slide_btn_2">공구팸 찾으러 가기</button>
                 </div>
                 
                 <!-- Next and previous buttons -->
@@ -58,6 +139,8 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                   
             </div>
+
+            <!--검색바: 찾으시는 상품이 있나요?-->
 
             <div class="wrap">
                 <div class="searchbar">
@@ -70,6 +153,7 @@
                 </div>
              </div>    
 
+            <!--지금 제일 핫한 공구!-->
 
             <div id="main1">
                 <div id="main1_title">
@@ -79,85 +163,90 @@
                 </div>
             </div>
             
-            <div id="list_goods">
+            <!--상품창-->
 
-                <div id="gallery">
-                    <a target="_blank" href="salad.jpg">
-                        <img src="salad.jpg" width="400" height="600">
-                    </a>
+            <!--상품 수량 박스 관련 설치-->
+
+
+            <!--<div class="list_goods">-->
+
+                <div id="goods1">
+                    <img src="salad.jpg" class="goods_img hover-shadow">
                     <div class="desc">샐러드 야채 6종<br/>6,500원</div>
-                    <input id="quantity" type="number"/>
+                    <input id="salad" type="number">
                     <input onclick="saveUser2()" value="장바구니 담기" type="button"/>
                 </div>
 
-                <div id="gallery">
-                    <a target="_blank" href="juice.png">
-                        <img src="juice.png" width="400" height="600">
+                <div id="goods2">
+                    
+                        <img src="juice.png" class="goods_img hover-shadow">
                         <div class="desc">착즙주스 재료 7종<br/>9,500원</div>
                         <input id="quantity2" type="number"/>
                         <input onclick="saveUser3()" value="장바구니 담기" type="button"/>
-                    </a>
                 </div>
 
-                <div id="gallery">
-                    <a target="_blank" href="viet.jpg">
-                        <img src="viet.jpg" width="400" height="600">
+                <div id="goods3">
+                    
+                        <img src="viet.jpg"  class="goods_img hover-shadow">
                         <div class="desc">월남쌈 1회분 야채<br/>4,500원</div>
                         <input id="quantity3" type="number"/>
                         <input onclick="saveUser4()" value="장바구니 담기" type="button"/>
-                    </a>
+                    
                 </div>
 
-                <div id="gallery">
-                    <a target="_blank" href="mara.jpg">
-                        <img src="mara.jpg" width="400" height="600">
+                <div id="goods4">
+                    
+                        <img src="mara.jpg"  class="goods_img hover-shadow">
                         <div class="desc">마라탕 재료 종합세트<br/>12,500원</div>
                         <input id="quantity4" type="number"/>
                         <input onclick="saveUser5()" value="장바구니 담기" type="button"/>
-                    </a>
+                    
                 </div>
 
-            </div>
+            <!--</div>-->
 
-            <div id="list_goods_2">
+            <!--<div ckass="list_goods_2">-->
 
-                <div id="gallery">
-                    <a target="_blank" href="전복.png">
-                        <img src="전복.png" width="400" height="600">
-                    </a>
+                <div id="goods5">
+                    
+                        <img src="전복.png" class="goods_img hover-shadow">
+                    
                     <div class="desc">쫄깃쫄깃 전복<br/>15,000원</div>
                     <input id="quantity5" type="number"/>
                     <input onclick="saveUser6()" value="장바구니 담기" type="button"/>
                 </div>
 
-                <div id="gallery">
-                    <a target="_blank" href="아보카도.png">
-                        <img src="아보카도.png" width="400" height="600">
+                <div id="goods6">
+                    
+                        <img src="아보카도.png" class="goods_img hover-shadow">
                         <div class="desc">부드러운 아보카도<br/>8,500원</div>
                         <input id="quantity6" type="number"/>
                         <input onclick="saveUser7()" value="장바구니 담기" type="button"/>
-                    </a>
+                    
                 </div>
 
-                <div id="gallery">
-                    <a target="_blank" href="peach.png">
-                        <img src="peach.png" width="400" height="600">
+                <div id="goods7">
+                    
+                        <img src="peach.png" class="goods_img hover-shadow">
                         <div class="desc">향긋한 복숭아<br/>12,500원</div>
                         <input id="quantity7" type="number"/>
                         <input onclick="saveUser8()" value="장바구니 담기" type="button"/>
-                    </a>
+                    
                 </div>
 
-                <div id="gallery">
-                    <a target="_blank" href="banana.png">
-                        <img src="banana.png" width="400" height="600">
+                <div id="goods8">
+                    
+                        <img src="banana.png" class="goods_img hover-shadow">
                         <div class="desc">바나나 3개<br/>1,500원</div>
                         <input id="quantity8" type="number"/>
                         <input onclick="saveUser9()" value="장바구니 담기" type="button"/>
-                    </a>
+                    
                 </div>
 
-            </div>
+
+            <!--</div>-->
+
+            <!--푸터-->
 
             <div id="footer_line">
             <hr style="width:95%" color="#EAECEE">
@@ -189,71 +278,124 @@
 
 
     <script>
+
+        //슬라이더
+
         var slideIndex = 1;
-showSlides(slideIndex);
+        showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+            // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
 
 
-fetch('http://localhost:3000/users')
-    .then(res => res.json())
-    .then(data => {
-      const users = data.arr;
-      let html ='';
-      for (const user of users) {
-        const name = user.name;
-        html+= '<p>'+name+'</p>';
-      }
-      document.getElementById('user_list').innerHTML = html;
-    })
+        // 로그인 API
 
 
 
 
-    function saveUser1() {
-      const search= document.getElementById("search").value;
-      console.log(search);
-      fetch('http://localhost:3000/users', {
-        "method": "POST", 
-        "body": JSON.stringify({ search:search }),
-        "headers": {"Content-Type": "application/json"}
-      })
-    }
+        // 검색창 데이터 fetch
 
-    function saveUser2() {
-      const salad= document.getElementById("salad").value;
-      fetch('http://localhost:3000/users', {
-        "method": "POST", 
-        "body": JSON.stringify({ salad:salad }),
-        "headers": {"Content-Type": "application/json"}
-      })
-    }
+        fetch('http://localhost:3000/users')
+            .then(res => res.json())
+            .then(data => {
+            const users = data.arr;
+            let html ='';
+            for (const user of users) {
+                const name = user.name;
+                html+= '<p>'+name+'</p>';
+            }
+            document.getElementById('user_list').innerHTML = html;
+            })
+
+ 
+
+        // 상품 데이터 fetch
+
+        function saveUser2() {
+        const salad = document.getElementById("salad").value;
+        console.log(salad);
+        fetch('http://localhost:3000/users', {
+            "method": "POST", 
+            "body": JSON.stringify({ salad:salad }),
+            "headers": {"Content-Type": "application/json"}
+        })
+        }
+
+        function saveUser2() {
+            alert("장바구니에 담겼습니다")
+        const salad= document.getElementById("salad").value;
+        fetch('http://localhost:3000/users', {
+            "method": "POST", 
+            "body": JSON.stringify({ salad:salad }),
+            "headers": {"Content-Type": "application/json"}
+        })
+        }
+
+        function saveUser3() {
+            alert("장바구니에 담겼습니다")
+        const salad= document.getElementById("juice").value;
+        fetch('http://localhost:3000/users', {
+            "method": "POST", 
+            "body": JSON.stringify({ juice:juice }),
+            "headers": {"Content-Type": "application/json"}
+        })
+        }
+
+        // 로그인창 Get the modal
+        var modal = document.getElementById('id01');
+
+        // 로그인창 When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+        }
+
+        // 로그인 완료 알림 메시지
+
+        function login() {
+            alert("로그인 완료")
+        }
+
+        // 회원가입창 Get the modal
+        var modal = document.getElementById('id02');
 
 
+        // 회원가입 정보 데이터 베이스 저장
+
+        function signup() {
+        const signup_ID = document.getElementById("signup_ID").value;
+        const signup_pwd = document.getElementById("signup_pwd").value;
+        fetch('http://localhost:3000/users', {
+            "method": "POST", 
+            "body": JSON.stringify({signup_ID:email, signup_pwd:pwd }),
+            "headers": {"Content-Type": "application/json"}
+        })
+        }
 
     </script>
+
 </html>

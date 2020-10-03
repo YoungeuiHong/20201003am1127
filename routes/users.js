@@ -31,8 +31,8 @@ router.post('/', async function(req, res, next) {
   try {
     const {name, money, email, pwd, salad, juice, viet, mara, shell, avocado, peach, banana, search} = req.body;
     const connection = await pool.getConnection();
-    const pwdSalt = (await crypto.randomBytes(64)).toString("base64");
-    const hashedPwd = (crypto.pbkdf2Sync(pwd, pwdSalt, 100000, 64, "SHA512")).toString("base64");
+    const pwdSalt = (await crypto.randomBytes(64)).toString('base64');
+    const hashedPwd = (crypto.pbkdf2Sync(pwd, pwdSalt, 100000, 64, "SHA512")).toString('base64');
     await connection.query('INSERT INTO user_TB(name, money, email, hashed_pwd, pwd_salt, salad, juice, viet, mara, shell, avocado, peach, banana, search) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)', [name, money, email, hashedPwd, pwdSalt, salad, juice, viet, mara, shell, avocado, peach, banana, search]);
     res.json({status: 201, msg: '저장 성공!'});
   } catch(err) {
@@ -50,12 +50,12 @@ router.post('/login', async function(req, res, next) {
     const connection = await pool.getConnection();
     const [users] = await connection.query('SELECT * from user_TB WHERE email = ?', [email]);
     if(users.length===0) {
-      return res.json({status: 401, msg: '없는 이메일이에요!'});
+      return res.json({status: 401, msg: '가입되지 않은 이메일입니다'});
     }
     const user = users[0];
     const hashedPwd = (crypto.pbkdf2Sync(pwd, user.pwd_salt, 100000, 64, 'SHA512')).toString('base64');
     if (user.hashed_pwd !== hashedPwd) {
-      return res.json({status: 401, msg: '일치하지 않는 비밀번호에요.'})
+      return res.json({status: 401, msg: '일치하지 않는 비밀번호입니다'})
     }
 
 
