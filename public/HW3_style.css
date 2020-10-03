@@ -260,34 +260,39 @@
 
 /* 슬라이더 */
 
-    #slider {
+
+    .slider {
         grid-row: 11/32;
         grid-column: 1/13;
         overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
+        position: relative;
+       /* margin-left: auto;
+        margin-right: auto; */
     }
-
-
-    #myslides img {
-        display: block;
-        max-height: 100%;
-        overflow: hidden;
-        z-index: 0;
-    }
-
 
     .mySlides {
-        display: none;
+      display: none;
+      z-index: 0;
+      position: relative;
+    }
+
+
+    .myslides img {
+        display: block;
+        width: 1350px;
+        height: 410px; 
+        /* max-width: 100%;
+        overflow: hidden; */
         z-index: 0;
-      }
+    }
+
 
     .prev, .next {
         cursor: pointer;
         position: absolute;
         top: 50%;
         width: auto;
-        margin-top: auto;
+        margin-top: -22px;
         padding: 16px;
         color: grey;
         font-weight: bold;
@@ -296,6 +301,7 @@
         border-radius: 0 3px 3px 0;
         user-select: none;
       }
+
 
     /* Position the "next button" to the right */
     .next {
@@ -329,17 +335,19 @@
 
     /* Style the button and place it in the middle of the container/image */
     .mySlides .slide_btn_1 {
+        display: table-cell;
+        vertical-align: middle;
         position: absolute;
         top: 70%;
-        left: 14%;
-        height: 8%;
+        left: 16%;
+        max-height: 20%;
         max-width: 30%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #407dcc;
         color: white;
-        font-size: 18px;
-        padding: 12px 40px;
+        font-size: 1.5vw;
+        padding: 1vw 2vw;
         border: none;
         cursor: pointer;
         border-radius: 50px;
@@ -369,6 +377,17 @@
       }
 
 /* 검색창 */
+
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    grid-row: 32/42;
+    grid-column: 1/13;
+    width: 75%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
 
     .searchbar {
       
@@ -404,25 +423,12 @@
       font-size: 35px;
     }
 
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    width: 75%;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-  }
-
 
 /* 지금 제일 핫한 공구 */
 
-    #main1 {
-        grid-row: 45/50;
-        grid-column: 1/13;
-    }
 
     #main1_title {
-        grid-row: 45/50;
+        grid-row: 42/50;
         grid-column: 1/13;
     }
 
