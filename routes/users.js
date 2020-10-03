@@ -63,9 +63,9 @@ router.get('/', async function(req, res, next) {
 router.post('/', async function(req, res, next) {
   
   try {
-    const {salad, juice, viet, mara, shell, avocado, peach, banana, search} = req.body;
+    const {email, salad, juice, viet, mara, shell, avocado, peach, banana, search, address} = req.body;
     const connection = await pool.getConnection();
-    await connection.query('INSERT INTO user_TB(salad, juice, viet, mara, shell, avocado, peach, banana, search) VALUES(?,?,?,?,?,?,?,?,?)', [salad, juice, viet, mara, shell, avocado, peach, banana, search]);
+    await connection.query('INSERT INTO user_TB(email, salad, juice, viet, mara, shell, avocado, peach, banana, search, address) VALUES(?,?,?,?,?,?,?,?,?,?,?)', [email, salad, juice, viet, mara, shell, avocado, peach, banana, search, address]);
     res.json({status: 201, msg: '저장 성공!'});
   } catch(err) {
     console.log(err);

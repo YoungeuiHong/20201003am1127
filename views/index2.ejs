@@ -169,24 +169,96 @@
                 <div id="goods1">
                     <img src="salad.jpg" class="goods_img hover-shadow">
                     <div class="desc">샐러드 야채 6종<br/>6,500원</div>
-                    <input id="salad" type="number">
-                    <input onclick="saveUser2()" value="장바구니 담기" type="button"/>
+                    <button class="order_button" onclick="document.getElementById('id03').style.display='block'">주문하기</button>
+                    <!--주문하기 modal-->
+
+                    <div id="id03" class="order_modal">
+                    <span onclick="document.getElementById('id03').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form class="order_modal-content animate" action="/action_page.php">
+
+                        <div class="order_container">
+                        <label for="uname"><b>이메일</b></label>
+                        <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+
+                        <label for="psw"><b>주소</b></label>
+                        <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+
+                        <label for="uname"><b>주문 수량</b></label>
+                        <br>
+                        <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                        <br>
+                        <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                        </div>
+
+                    </form>
+                    </div>
                 </div>
 
                 <div id="goods2">
                     
                         <img src="juice.png" class="goods_img hover-shadow">
                         <div class="desc">착즙주스 재료 7종<br/>9,500원</div>
-                        <input id="quantity2" type="number"/>
-                        <input onclick="saveUser3()" value="장바구니 담기" type="button"/>
+                        <button class="order_button" onclick="document.getElementById('id04').style.display='block'">주문하기</button>
+                        <!--주문하기 modal-->
+    
+                        <div id="id04" class="order_modal">
+                        <span onclick="document.getElementById('id04').style.display='none'"
+                        class="close" title="Close Modal">&times;</span>
+    
+                        <!-- Modal Content -->
+                        <form class="order_modal-content animate" action="/action_page.php">
+    
+                            <div class="order_container">
+                            <label for="uname"><b>이메일</b></label>
+                            <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                            <label for="psw"><b>주소</b></label>
+                            <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+    
+                            <label for="uname"><b>주문 수량</b></label>
+                            <br>
+                            <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                            <br>
+                            <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                            </div>
+    
+                        </form>
+                        </div>
                 </div>
 
                 <div id="goods3">
                     
                         <img src="viet.jpg"  class="goods_img hover-shadow">
                         <div class="desc">월남쌈 1회분 야채<br/>4,500원</div>
-                        <input id="quantity3" type="number"/>
-                        <input onclick="saveUser4()" value="장바구니 담기" type="button"/>
+                        <button class="order_button" onclick="document.getElementById('id05').style.display='block'">주문하기</button>
+                        <!--주문하기 modal-->
+    
+                        <div id="id05" class="order_modal">
+                        <span onclick="document.getElementById('id05').style.display='none'"
+                        class="close" title="Close Modal">&times;</span>
+    
+                        <!-- Modal Content -->
+                        <form class="order_modal-content animate" action="/action_page.php">
+    
+                            <div class="order_container">
+                            <label for="uname"><b>이메일</b></label>
+                            <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                            <label for="psw"><b>주소</b></label>
+                            <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+    
+                            <label for="uname"><b>주문 수량</b></label>
+                            <br>
+                            <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                            <br>
+                            <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                            </div>
+    
+                        </form>
+                        </div>
                     
                 </div>
 
@@ -194,8 +266,32 @@
                     
                         <img src="mara.jpg"  class="goods_img hover-shadow">
                         <div class="desc">마라탕 재료 종합세트<br/>12,500원</div>
-                        <input id="quantity4" type="number"/>
-                        <input onclick="saveUser5()" value="장바구니 담기" type="button"/>
+                        <button class="order_button" onclick="document.getElementById('id06').style.display='block'">주문하기</button>
+                        <!--주문하기 modal-->
+    
+                        <div id="id06" class="order_modal">
+                        <span onclick="document.getElementById('id06').style.display='none'"
+                        class="close" title="Close Modal">&times;</span>
+    
+                        <!-- Modal Content -->
+                        <form class="order_modal-content animate" action="/action_page.php">
+    
+                            <div class="order_container">
+                            <label for="uname"><b>이메일</b></label>
+                            <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                            <label for="psw"><b>주소</b></label>
+                            <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+    
+                            <label for="uname"><b>주문 수량</b></label>
+                            <br>
+                            <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                            <br>
+                            <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                            </div>
+    
+                        </form>
+                        </div>
                     
                 </div>
 
@@ -208,16 +304,64 @@
                         <img src="전복.PNG" class="goods_img hover-shadow">
                     
                     <div class="desc">쫄깃쫄깃 전복<br/>15,000원</div>
-                    <input id="quantity5" type="number"/>
-                    <input onclick="saveUser6()" value="장바구니 담기" type="button"/>
+                    <button class="order_button" onclick="document.getElementById('id07').style.display='block'">주문하기</button>
+                    <!--주문하기 modal-->
+
+                    <div id="id07" class="order_modal">
+                    <span onclick="document.getElementById('id07').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form class="order_modal-content animate" action="/action_page.php">
+
+                        <div class="order_container">
+                        <label for="uname"><b>이메일</b></label>
+                        <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+
+                        <label for="psw"><b>주소</b></label>
+                        <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+
+                        <label for="uname"><b>주문 수량</b></label>
+                        <br>
+                        <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                        <br>
+                        <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                        </div>
+
+                    </form>
+                    </div>
                 </div>
 
                 <div id="goods6">
                     
                         <img src="아보카도.PNG" class="goods_img hover-shadow">
                         <div class="desc">부드러운 아보카도<br/>8,500원</div>
-                        <input id="quantity6" type="number"/>
-                        <input onclick="saveUser7()" value="장바구니 담기" type="button"/>
+                        <button class="order_button" onclick="document.getElementById('id08').style.display='block'">주문하기</button>
+                        <!--주문하기 modal-->
+    
+                        <div id="id08" class="order_modal">
+                        <span onclick="document.getElementById('id08').style.display='none'"
+                        class="close" title="Close Modal">&times;</span>
+    
+                        <!-- Modal Content -->
+                        <form class="order_modal-content animate" action="/action_page.php">
+    
+                            <div class="order_container">
+                            <label for="uname"><b>이메일</b></label>
+                            <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                            <label for="psw"><b>주소</b></label>
+                            <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+    
+                            <label for="uname"><b>주문 수량</b></label>
+                            <br>
+                            <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                            <br>
+                            <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                            </div>
+    
+                        </form>
+                        </div>
                     
                 </div>
 
@@ -225,8 +369,32 @@
                     
                         <img src="peach.PNG" class="goods_img hover-shadow">
                         <div class="desc">향긋한 복숭아<br/>12,500원</div>
-                        <input id="quantity7" type="number"/>
-                        <input onclick="saveUser8()" value="장바구니 담기" type="button"/>
+                        <button class="order_button" onclick="document.getElementById('id09').style.display='block'">주문하기</button>
+                        <!--주문하기 modal-->
+    
+                        <div id="id09" class="order_modal">
+                        <span onclick="document.getElementById('id09').style.display='none'"
+                        class="close" title="Close Modal">&times;</span>
+    
+                        <!-- Modal Content -->
+                        <form class="order_modal-content animate" action="/action_page.php">
+    
+                            <div class="order_container">
+                            <label for="uname"><b>이메일</b></label>
+                            <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                            <label for="psw"><b>주소</b></label>
+                            <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+    
+                            <label for="uname"><b>주문 수량</b></label>
+                            <br>
+                            <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                            <br>
+                            <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                            </div>
+    
+                        </form>
+                        </div>
                     
                 </div>
 
@@ -234,8 +402,32 @@
                     
                         <img src="banana.PNG" class="goods_img hover-shadow">
                         <div class="desc">바나나 3개<br/>1,500원</div>
-                        <input id="quantity8" type="number"/>
-                        <input onclick="saveUser9()" value="장바구니 담기" type="button"/>
+                        <button class="order_button" onclick="document.getElementById('id10').style.display='block'">주문하기</button>
+                        <!--주문하기 modal-->
+    
+                        <div id="id10" class="order_modal">
+                        <span onclick="document.getElementById('id10').style.display='none'"
+                        class="close" title="Close Modal">&times;</span>
+    
+                        <!-- Modal Content -->
+                        <form class="order_modal-content animate" action="/action_page.php">
+    
+                            <div class="order_container">
+                            <label for="uname"><b>이메일</b></label>
+                            <input id="email" class="order_ID" type="text" placeholder="이메일을 입력해주세요" name="uname" required>
+    
+                            <label for="psw"><b>주소</b></label>
+                            <input id="address" class="order_address" type="text" placeholder="상품을 받으실 주소를 입력해주세요" name="psw" required>
+    
+                            <label for="uname"><b>주문 수량</b></label>
+                            <br>
+                            <input id="salad" class="order_quant" type="number" placeholder="주문 수량" name="uname" style="height: 3em;" required>
+                            <br>
+                            <button class="order_button_in" type="submit" onclick="salad()">주문하기</button>
+                            </div>
+    
+                        </form>
+                        </div>
                     
                 </div>
 
@@ -254,12 +446,13 @@
                 </div>
             </div>
 
-            <div id="footer2">              
+            <div id="footer2"> 
+                <br>        
                 <p class="footer1_font2">법인명(상호): 함께혼밥 | 사업자등록번호: 261-82-98534 <br/>통신판매업: 제 2020-서울관악-11345호 | 개인정보보호책임자: 홍길동 <br/>주소: 서울시 관악구 관악로 1, 서울대학교  |  대표이사: 홍길동 <br/>채용문의: recruit@together.com <br/> 팩스: 02-990-1254  |  이메일: snuhongfrcs@snu.ac.kr </p>
             </div>
 
             <div id="footer3">
-                <p class="footer3_font1">함께혼밥 SNS 보러가기</p>               
+                <p class="footer3_font1">함께혼밥 SNS</p>               
                 <img src="ico_blog.webp" width="40" height="40">
                 <img src="ico_fb.webp" width="40" height="40">
                 <img src="ico_instagram.webp" width="40" height="40">
@@ -320,8 +513,8 @@
             const users = data.arr;
             let html ='';
             for (const user of users) {
-                const name = user.name;
-                html+= '<p>'+name+'</p>';
+                const email = user.email;
+                html+= '<p>'+email+'</p>';
             }
             document.getElementById('user_list').innerHTML = html;
             })
@@ -330,36 +523,23 @@
 
         // 상품 데이터 fetch
 
-        function saveUser2() {
-            alert("장바구니에 담겼습니다")
+        // 상품1: 샐러드
+
+        function salad() {
+            alert("주문이 완료되었습니다")
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
             const salad = document.getElementById("salad").value;
-            console.log(salad);
             fetch('http://localhost:3000/users', {
                 "method": "POST", 
-                "body": JSON.stringify({ salad:salad }),
+                "body": JSON.stringify({ email:email, address:address, salad:salad }),
                 "headers": {"Content-Type": "application/json"}
         })
         }
 
-        function saveUser3() {
-            alert("장바구니에 담겼습니다")
-        const salad= document.getElementById("salad").value;
-        fetch('http://localhost:3000/users', {
-            "method": "POST", 
-            "body": JSON.stringify({ salad:salad }),
-            "headers": {"Content-Type": "application/json"}
-        })
-        }
+       
 
-        function saveUser4() {
-            alert("장바구니에 담겼습니다")
-        const salad= document.getElementById("juice").value;
-        fetch('http://localhost:3000/users', {
-            "method": "POST", 
-            "body": JSON.stringify({ juice:juice }),
-            "headers": {"Content-Type": "application/json"}
-        })
-        }
+
 
         // 로그인창 Get the modal
         var modal = document.getElementById('id01');
@@ -392,6 +572,15 @@
             "headers": {"Content-Type": "application/json"}
         })
         }
+
+        // 주문하기 modal
+        var modal3 = document.getElementById('id03');
+        var modal4 = document.getElementById('id04');
+        var modal3 = document.getElementById('id03');
+        var modal3 = document.getElementById('id03');
+        var modal3 = document.getElementById('id03');
+        var modal3 = document.getElementById('id03');
+        var modal3 = document.getElementById('id03');
 
     </script>
 
